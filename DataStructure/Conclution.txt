@@ -1,0 +1,66 @@
+Data Structure :
+
+1.  Set => Structure data adalah kumpulan data yang tidak mengandung nilai duplikat di dalamnya.
+        => Implementasi Set dengan Array :
+            * Create => Membuat object baru ( kosong )
+            * Public Add => Adding data
+            * Public Remove => Menghapus data
+            * Public Contains => Cek apakah suatu nilai sudah ada di dalam Set
+            * Private Check Capacity => Untuk mengecek apakah Array masih muat dan akan di Growth
+            * Private Index Of => Fungsi yang akan dipanggil oleh Remove dan mulai menggeser nilai setelah Remove
+            * Public Display => Menampilkan isi data Set
+
+2.  Linked List => Structure data ini adalah kumpulan dari beberapa data yang tersebar di dalam memori dan
+                    saling terhubung dengan alamat penunjuk atau pointer ( Previous dan next ) dan bisa 
+                    saja mengandung duplikasi atau nilai yang sama.
+                => Macam - macam Linked List :
+                    * Singly Linked List => 1 arah ( Next )
+                        ** Linked List yang hanya 1 arah dan hanya mempunyai 1 pointer saja yaitu Next
+                        ** Add First dengan Delete Last atau Add Last dengan Delete First
+                        ** Pointer Next pada Tail akan selalu bernilai NULL
+                    * Doubly Linked List => 2 arah ( Next & Previous )
+                        ** Linked List 2 arah dan mempunyai 2 pointer yaitu Next & Previous
+                        ** Pointer Next pada Tail akan selalu bernilai NULL
+                        ** Pointer Previous pada Head akan selalu bernilai NULL
+                    * Circular Linked List => 1 arah dan berputar ( Next )
+                        ** Linked List yang hanya 1 arah dan hanya mempunyai 1 pointer saja yaitu Next
+                        ** Pointer next pada Tail akan menyimpan alamat Head ( Berputar )
+                    * Circular Doubly Linked List => 2 arah dan berputar ( Next & Previous )
+                        ** Linked List 2 arah dan mempunyai 2 pointer yaitu Next & Previous
+                        ** Berputar
+                        ** Pointer Previous pada Head akan menyimpan alamat Tail
+                        ** Pointer Next pada Tail akan menyimpan alamat Head
+                => Field :
+                    * Inner class Node
+                        ** Public Value ( Generic, Inner class Node )
+                        ** Public Next ( Tipe data Node, Pointer, Inner class Node, 4 Linked List punya )
+                        ** Public Previous ( Hanya Doubly & Circular Doubly Linked List yang punya )
+                    * Private Node Head
+                    * Private Node Tail
+                    * Private int Size
+                => Fungsi - fungsi :
+                    * Public Linked List => Constructor untuk membuat Linked List kosong
+                    * Public Add First => Adding data dari depan
+                    * Public Add Last => Adding data dari belakang
+                    * Public Add => Adding data di mana saja
+                    * Public Delete First => Mendapatkan dan Menghapus data dari depan
+                    * Public Delete Last => Mendapatkan dan Menghapus data dari belakang
+                    * Public Delete => Mendapatkan dan Menghapus data di mana saja
+                    * Public Peek First => Mendapatkan nilai terdepan tanpa Menghapus
+                    * Public Peek Last => Mendapatkan nilai terakhir tanpa Menghapus
+                    * Public Contains => Cek apakah suatu nilai ada di dalam Linked List dan mengembalikan Posisi
+                    * Private Is Empty => Cek apakah Linked List masih kosong
+                    * Public Print or Display => Menampilkan isi dari Linked List
+                    * Public Size => Mendapatkan jumlah dari banyaknya elemen di dalam Linked List
+                => Note Github :
+                    * Arah :
+                        ** Singly Linked List   => 1 arah saja (Add First - Delete Last)
+                                                => Dari depan ke belakang / Sebaliknya
+                        ** Doubly Linked List   => 2 arah (Add First - Delete Last || Add Last - Delete First)
+                                                => Dari depan ke belakang / Sebaliknya
+                                                => Semua operator dipakai dan public
+                        ** Circular Singly LL   => 1 arah saja (Add First - Delete Last)
+                                                => Dari depan ke belakang / Sebaliknya
+                        ** Circular Doubly LL   => 2 arah (Add First - Delete Last || Add Last - Delete First)
+                                                => Dari depan ke belakang || belakang ke depan
+                                                => Semua operator dipakai dan public
