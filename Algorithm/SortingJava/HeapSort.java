@@ -1,6 +1,7 @@
 package Algorithm.SortingJava;
 
 import java.util.Arrays;
+
 class Heap {
     private int arrayCapacity = 10;
     private int[] data = new int[arrayCapacity];

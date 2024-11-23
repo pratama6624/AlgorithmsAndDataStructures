@@ -1,4 +1,4 @@
-package Algorithm.Classification;
+package Algorithm.ClassificationJava;
 
 public class LogisticRegression {
     
